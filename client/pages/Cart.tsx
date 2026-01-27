@@ -190,8 +190,8 @@ export default function Cart() {
 
               {/* Order Summary */}
               <div className="lg:col-span-1">
-                <div className="bg-white border border-border rounded-xl p-6 sticky top-24 h-fit">
-                  <h3 className="text-xl font-bold text-foreground mb-6">
+                <div className="bg-white border border-border rounded-xl p-4 md:p-6 lg:sticky lg:top-24 lg:h-fit">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-6">
                     Order Summary
                   </h3>
 
@@ -228,17 +228,17 @@ export default function Cart() {
                   <div className="border-t border-border pt-4 mb-6">
                     <div className="flex justify-between">
                       <span className="font-bold text-foreground">Total</span>
-                      <span className="text-2xl font-bold text-primary">
+                      <span className="text-xl md:text-2xl font-bold text-primary">
                         ${total.toFixed(2)}
                       </span>
                     </div>
                   </div>
 
-                  <button className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 mb-3">
+                  <button className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 mb-3 text-sm md:text-base">
                     Checkout
                   </button>
 
-                  <button className="w-full px-6 py-3 border-2 border-border text-foreground font-semibold rounded-lg hover:border-primary transition-all duration-300">
+                  <button className="w-full px-6 py-3 border-2 border-border text-foreground font-semibold rounded-lg hover:border-primary transition-all duration-300 text-sm md:text-base">
                     Continue Shopping
                   </button>
 
