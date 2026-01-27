@@ -101,12 +101,12 @@ export default function Cart() {
                     {cartItems.map((item) => (
                       <div
                         key={item.id}
-                        className="px-6 py-6 flex gap-6 animate-fade-in"
+                        className="px-4 md:px-6 py-6 flex gap-4 md:gap-6 animate-fade-in"
                       >
                         {/* Image */}
                         <Link
                           to={`/products/${item.id}`}
-                          className="flex-shrink-0 w-24 h-24 bg-gray-100 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                          className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-gray-100 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
                         >
                           <img
                             src={item.image}
@@ -116,46 +116,46 @@ export default function Cart() {
                         </Link>
 
                         {/* Details */}
-                        <div className="flex-1 flex flex-col justify-between">
+                        <div className="flex-1 flex flex-col justify-between min-w-0">
                           <div>
                             <Link
                               to={`/products/${item.id}`}
-                              className="font-semibold text-foreground hover:text-primary transition-colors"
+                              className="font-semibold text-foreground hover:text-primary transition-colors line-clamp-2 text-sm md:text-base"
                             >
                               {item.name}
                             </Link>
-                            <p className="text-sm text-muted-foreground mt-1">
+                            <p className="text-xs md:text-sm text-muted-foreground mt-1">
                               SKU: {Math.random().toString(36).substr(2, 9)}
                             </p>
                           </div>
 
-                          <div className="flex items-center justify-between">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                             {/* Quantity */}
-                            <div className="flex items-center border border-border rounded-lg">
+                            <div className="flex items-center border border-border rounded-lg w-fit">
                               <button
                                 onClick={() =>
                                   updateQuantity(item.id, item.quantity - 1)
                                 }
-                                className="px-3 py-1 hover:bg-gray-100 transition-colors text-sm"
+                                className="px-2 md:px-3 py-1 hover:bg-gray-100 transition-colors text-sm"
                               >
                                 −
                               </button>
-                              <span className="px-4 py-1 border-l border-r border-border text-sm">
+                              <span className="px-3 md:px-4 py-1 border-l border-r border-border text-sm">
                                 {item.quantity}
                               </span>
                               <button
                                 onClick={() =>
                                   updateQuantity(item.id, item.quantity + 1)
                                 }
-                                className="px-3 py-1 hover:bg-gray-100 transition-colors text-sm"
+                                className="px-2 md:px-3 py-1 hover:bg-gray-100 transition-colors text-sm"
                               >
                                 +
                               </button>
                             </div>
 
                             {/* Price */}
-                            <div className="text-right">
-                              <p className="font-bold text-foreground">
+                            <div className="text-right sm:ml-auto">
+                              <p className="font-bold text-foreground text-sm md:text-base">
                                 ${(item.price * item.quantity).toFixed(2)}
                               </p>
                               <p className="text-xs text-muted-foreground">
@@ -170,7 +170,7 @@ export default function Cart() {
                           onClick={() => removeItem(item.id)}
                           className="flex-shrink-0 p-2 text-destructive hover:bg-destructive/10 rounded-lg transition-colors"
                         >
-                          <Trash2 className="w-5 h-5" />
+                          <Trash2 className="w-4 h-4 md:w-5 md:h-5" />
                         </button>
                       </div>
                     ))}
