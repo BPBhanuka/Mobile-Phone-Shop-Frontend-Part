@@ -91,7 +91,8 @@ export default function Index() {
                     Discover the Future of Mobile
                   </h1>
                   <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-                    Explore the latest flagship phones with unbeatable prices. Premium quality, fast shipping, and hassle-free returns.
+                    Explore the latest flagship phones with unbeatable prices.
+                    Premium quality, fast shipping, and hassle-free returns.
                   </p>
                 </div>
 
@@ -112,7 +113,9 @@ export default function Index() {
                 <div className="flex gap-6 pt-4">
                   <div>
                     <p className="font-bold text-2xl text-primary">10K+</p>
-                    <p className="text-sm text-muted-foreground">Happy Customers</p>
+                    <p className="text-sm text-muted-foreground">
+                      Happy Customers
+                    </p>
                   </div>
                   <div>
                     <p className="font-bold text-2xl text-primary">500+</p>
@@ -240,7 +243,8 @@ export default function Index() {
                 Stay Updated
               </h2>
               <p className="text-muted-foreground mb-6">
-                Subscribe to our newsletter for exclusive deals and new arrivals.
+                Subscribe to our newsletter for exclusive deals and new
+                arrivals.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <input

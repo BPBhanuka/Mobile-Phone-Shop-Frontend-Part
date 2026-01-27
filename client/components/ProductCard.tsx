@@ -21,7 +21,9 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const [isFavorite, setIsFavorite] = useState(false);
   const discount = product.originalPrice
-    ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+    ? Math.round(
+        ((product.originalPrice - product.price) / product.originalPrice) * 100,
+      )
     : 0;
 
   return (
@@ -74,7 +76,9 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Content */}
         <div className="p-4">
-          <p className="text-xs text-muted-foreground font-medium mb-1">Mobile Phone</p>
+          <p className="text-xs text-muted-foreground font-medium mb-1">
+            Mobile Phone
+          </p>
           <h3 className="font-semibold text-sm line-clamp-2 text-foreground mb-2 group-hover:text-primary transition-colors">
             {product.name}
           </h3>

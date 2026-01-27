@@ -143,7 +143,8 @@ export default function Products() {
 
   const filteredProducts = allProducts.filter((product) => {
     if (priceFilter === "budget") return product.price < 600;
-    if (priceFilter === "mid") return product.price >= 600 && product.price < 1000;
+    if (priceFilter === "mid")
+      return product.price >= 600 && product.price < 1000;
     if (priceFilter === "premium") return product.price >= 1000;
     return true;
   });
@@ -167,7 +168,8 @@ export default function Products() {
               All Products
             </h1>
             <p className="text-muted-foreground">
-              Browse our complete selection of {allProducts.length} mobile phones
+              Browse our complete selection of {allProducts.length} mobile
+              phones
             </p>
           </div>
         </section>
@@ -191,7 +193,10 @@ export default function Products() {
                         { value: "mid", label: "Mid-Range ($600-$1000)" },
                         { value: "premium", label: "Premium (>$1000)" },
                       ].map((option) => (
-                        <label key={option.value} className="flex items-center gap-3 cursor-pointer group">
+                        <label
+                          key={option.value}
+                          className="flex items-center gap-3 cursor-pointer group"
+                        >
                           <input
                             type="radio"
                             name="price"

@@ -71,7 +71,10 @@ export default function ProductDetail() {
               Home
             </Link>
             <span>/</span>
-            <Link to="/products" className="hover:text-primary transition-colors">
+            <Link
+              to="/products"
+              className="hover:text-primary transition-colors"
+            >
               Products
             </Link>
             <span>/</span>
@@ -151,7 +154,9 @@ export default function ProductDetail() {
                     <span className="text-green-700 font-medium">In Stock</span>
                   </>
                 ) : (
-                  <span className="text-destructive font-medium">Out of Stock</span>
+                  <span className="text-destructive font-medium">
+                    Out of Stock
+                  </span>
                 )}
               </div>
 
@@ -251,7 +256,10 @@ export default function ProductDetail() {
               </h2>
               <div className="space-y-3">
                 {product.specs.map((spec, idx) => (
-                  <div key={idx} className="flex justify-between py-3 border-b border-border">
+                  <div
+                    key={idx}
+                    className="flex justify-between py-3 border-b border-border"
+                  >
                     <span className="text-muted-foreground">{spec.label}</span>
                     <span className="font-semibold text-foreground">
                       {spec.value}

@@ -28,7 +28,8 @@ const NotFound = () => {
               Oops! Page not found
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              The page you're looking for doesn't exist yet. Let us know what you'd like to see and we'll build it for you!
+              The page you're looking for doesn't exist yet. Let us know what
+              you'd like to see and we'll build it for you!
             </p>
           </div>
 

@@ -13,7 +13,10 @@ export function Header({ cartCount = 0 }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-border">
       <nav className="container flex items-center justify-between h-16 px-4 md:px-6">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 font-bold text-2xl text-primary">
+        <Link
+          to="/"
+          className="flex items-center gap-2 font-bold text-2xl text-primary"
+        >
           <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
             <span className="text-white text-sm font-black">M</span>
           </div>
@@ -92,13 +95,22 @@ export function Header({ cartCount = 0 }: HeaderProps) {
             >
               Shop
             </Link>
-            <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+            <a
+              href="#"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
+            >
               Categories
             </a>
-            <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+            <a
+              href="#"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
+            >
               Deals
             </a>
-            <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+            <a
+              href="#"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
+            >
               About
             </a>
           </div>

@@ -38,9 +38,7 @@ export default function Cart() {
       return;
     }
     setCartItems(
-      cartItems.map((item) =>
-        item.id === id ? { ...item, quantity } : item
-      )
+      cartItems.map((item) => (item.id === id ? { ...item, quantity } : item)),
     );
   };
 
@@ -50,7 +48,7 @@ export default function Cart() {
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
   const shipping = subtotal > 100 ? 0 : 10;
   const tax = subtotal * 0.1;
@@ -60,7 +58,9 @@ export default function Cart() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Header cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)} />
+      <Header
+        cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
+      />
 
       <main className="flex-1 py-8 md:py-12">
         <div className="container px-4 md:px-6">
@@ -75,8 +75,8 @@ export default function Cart() {
                 Your cart is empty
               </h2>
               <p className="text-muted-foreground mb-6">
-                Looks like you haven't added any items yet. Start shopping to see
-                products here!
+                Looks like you haven't added any items yet. Start shopping to
+                see products here!
               </p>
               <Link
                 to="/products"

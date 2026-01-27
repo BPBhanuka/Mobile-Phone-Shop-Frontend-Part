@@ -15,7 +15,8 @@ export function Footer() {
               <span>MobileHub</span>
             </div>
             <p className="text-sm text-gray-300">
-              Your trusted destination for premium mobile phones and accessories.
+              Your trusted destination for premium mobile phones and
+              accessories.
             </p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-primary transition-colors">
@@ -34,7 +35,10 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="font-semibold text-lg">Shop</h4>
             <div className="flex flex-col gap-2 text-sm text-gray-300">
-              <Link to="/products" className="hover:text-primary transition-colors">
+              <Link
+                to="/products"
+                className="hover:text-primary transition-colors"
+              >
                 All Products
               </Link>
               <a href="#" className="hover:text-primary transition-colors">
